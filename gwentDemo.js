@@ -12,12 +12,10 @@ initCard('Earth Elemental', 'mo', 'si', 6);
 
 //Function to initialize card
 function initCard (name, faction, range, strength, special = 'n/a') {
-    let factionResult = getFaction(faction);
-    let rangeResult = getRange(range);
     let cardObj = {
         'name'    : name,
-        'faction' : factionResult,
-        'range'   : rangeResult,
+        'faction' : getFaction(faction),
+        'range'   : getRange(range),
         'strength': strength,
         'special' : special
     }

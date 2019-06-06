@@ -1,0 +1,23 @@
+[
+     {
+          "name": "Earth Elemental",
+          "faction": "Monsters",
+          "range": "Siege",
+          "strength": 6,
+          "special": "n/a"
+     },
+     {
+          "name": "Botchling",
+          "faction": "Monsters",
+          "range": "Melee",
+          "strength": 4,
+          "special": "n/a"
+     },
+     {
+          "name": "Cockatrice",
+          "faction": "Monsters",
+          "range": "Ranged",
+          "strength": 6,
+          "special": "n/a"
+     }
+]

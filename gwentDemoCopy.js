@@ -4,10 +4,9 @@ const FS = require('fs');
 const NEW_JSON_PATH = 'D:/Computer Programming Files/Javascript/ExpressJS/Exercise/gwent-2.json';
 
 //INITIALIZING CARDS
+//Only work with one initCard() at a time, can't run all three of them in one go
 //initCard('Earth Elemental', 'mo', 'si', 6);
-console.log('');
 //initCard('Botchling', 'mo', 'me', 4);
-console.log('');
 //initCard('Cockatrice', 'mo', 'ra', 6);
 
 

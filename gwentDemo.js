@@ -1,27 +1,28 @@
-"use strict"
+'use strict';
 
-const fs = require("fs");
-
+const FS = require('fs');
+const NEW_JSON_PATH = 'D:/Computer Programming Files/Javascript/ExpressJS/Exercise/gwent.json';
 
 //INITIALIZING CARDS
+//Only work with one initCard() at a time, can't run all three of them in one go
 initCard('Earth Elemental', 'mo', 'si', 6);
 //initCard('Botchling', 'mo', 'me', 4);
-//initCard('Cockatrice', 'mo', 'ra', 2);
+//initCard('Cockatrice', 'mo', 'ra', 6);
 
 
 
 //Function to initialize card
-function initCard (name, faction, range, strength, special = 'n/a') {
-    let cardObj = {
-        'name'    : name,
-        'faction' : getFaction(faction),
-        'range'   : getRange(range),
+function initCard(name, faction, range, strength, special = 'n/a') {
+    let card = {
+        'name': name,
+        'faction': getFaction(faction),
+        'range': getRange(range),
         'strength': strength,
-        'special' : special
+        'special': special
     }
-
-    writeCardData(cardObj);
-    readCardData();
+    //addCard(NEW_JSON_PATH, card);
+    addCard(NEW_JSON_PATH, card);
+    //readCardData();
 };
 
 //Function to return card's faction
@@ -39,7 +40,7 @@ function getFaction(value) {
             return 'N/a';
     };
 };
-//Function to return card's combar range
+//Function to return card's combat range
 function getRange(value) {
     switch (value.toLowerCase()) {
         case 'me':
@@ -55,32 +56,36 @@ function getRange(value) {
 
 
 
-function readCardData() {
-    /*
-    let rawData = fs.readFileSync("D:/Computer Programming Files/Javascript/ExpressJS/Exercise/card.json");
-    let card = JSON.parse(rawData);
-    console.log(card);
-    */
-    //fs.readFile("D:/Computer Programming Files/Javascript/ExpressJS/Exercise/card.json", function (error, rawData) {
+//Edit the JSON file
+function addCard(givenPath, cardInfo) {
+    let arrayOfObjects = readCardData(givenPath);
 
+    //checks if the object we want to add already exists
+    let found = arrayOfObjects.find(function (element) {
+        if (element['name'] === cardInfo['name']) {
+            return element;
 
-    fs.readFile("./gwent.json", function (error, rawData) {
-
-        // No need for a try catch since this is the error handling here
-        // try/catch would be for whatever calls this
-        if (error) {
-            throw error;
-        } else {
-            let card = JSON.parse(rawData);
-            console.log(card);
         }
-
     });
+
+    if (found) {
+        console.log('Card found. Updating...')
+        Object.assign(found, cardInfo);
+    }
+    //push if not
+    else {
+        arrayOfObjects.push(cardInfo);
+    }
+
+    //write the new info to JSON file
+    FS.writeFileSync(givenPath, JSON.stringify(arrayOfObjects, null, 5));
+    console.log('Card added successfully');
 }
 
-function writeCardData(data) {
-    fs.writeFileSync("gwent.json", JSON.stringify(data));
+//Read card data
+function readCardData(givenPath) {
+    let rawData = FS.readFileSync(givenPath);
+    let data = JSON.parse(rawData);
+    //console.log(data);
+    return data;
 }
-
-console.log("This is the after read call"); // This runs IMMEDIATELY not after the read ;)
-

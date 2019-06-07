@@ -4,7 +4,6 @@ const FS = require('fs');
 const NEW_JSON_PATH = 'D:/Computer Programming Files/Javascript/ExpressJS/Exercise/gwent.json';
 
 //INITIALIZING CARDS
-//Only work with one initCard() at a time, can't run all three of them in one go
 initCard('Earth Elemental', 'mo', 'si', 6);
 //initCard('Botchling', 'mo', 'me', 4);
 //initCard('Cockatrice', 'mo', 'ra', 6);
@@ -20,9 +19,7 @@ function initCard(name, faction, range, strength, special = 'n/a') {
         'strength': strength,
         'special': special
     }
-    //addCard(NEW_JSON_PATH, card);
     addCard(NEW_JSON_PATH, card);
-    //readCardData();
 };
 
 //Function to return card's faction

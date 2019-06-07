@@ -1,12 +1,12 @@
 'use strict';
 
 const FS = require('fs');
-const JSON_PATH = 'D:/Computer Programming Files/Javascript/ExpressJS/Exercise/gwent.json';
+const JSON_PATH = './gwent.json';
 
 
 //createCard('earth elemental', 'mo', 'si', 6);
 //createCard('botchling', 'mo', 'me', 4);
-//createCard('cockatrice', 'mo', 'ra', 6);
+createCard('cockatrice', 'mo', 'ra', 6);
 
 //deleteCard('cockatrice');
 

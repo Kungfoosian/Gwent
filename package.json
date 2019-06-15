@@ -1,15 +1,21 @@
 {
-  "name": "expressjs",
+  "name": "gwent",
   "version": "1.0.0",
-  "description": "Second install of ExpressJS",
-  "main": "app.js",
+  "description": "Gwent",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "express": "*",
-    "body-parser": "*"
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "author": "Anthony Vo",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }

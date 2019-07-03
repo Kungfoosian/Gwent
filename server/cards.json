@@ -1,0 +1,29 @@
+[
+     {
+          "id": "ca6119e9-9111-4ec2-a393-350a28fa7d16",
+          "name": "eithné",
+          "faction": "scoia'tael",
+          "unit": "hero",
+          "range": "ranged",
+          "strength": "10",
+          "special": "n/a"
+     },
+     {
+          "id": "deace575-545a-4a45-81cc-da9566952191",
+          "name": "francesca findabair: the beautiful",
+          "faction": "scoia'tael",
+          "unit": "leader",
+          "range": "n/a",
+          "strength": "1",
+          "special": "Doubles the strength of all your Ranged Combat units (unless a Commander's Horn is also present on that row)"
+     },
+     {
+          "id": "bf047851-933d-4b4c-84a2-9947396acf23",
+          "name": "dol blathana scout",
+          "faction": "scoia'tael",
+          "unit": "unit",
+          "range": "agile",
+          "strength": "6",
+          "special": "agile"
+     }
+]

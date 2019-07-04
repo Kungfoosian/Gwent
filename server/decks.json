@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "da77de56-a502-4a49-9aba-f07385d6bd69",
+    "faction": "scoia'tael",
+    "ability": "Chooses who goes first at the start of a round",
+    "cards": [
+      "ca6119e9-9111-4ec2-a393-350a28fa7d16",
+      "deace575-545a-4a45-81cc-da9566952191",
+      "bf047851-933d-4b4c-84a2-9947396acf23"
+    ]
+  },
+  {
+    "id": "426dc307-df75-43a2-82af-055e0dd5577f",
+    "faction": "monsters",
+    "ability": "One of your units in play is randomly carried over to the next round",
+    "cards": [
+      "16172cfe-3155-4d89-9a9e-6440481f0ea4",
+      "830d48a4-0358-4e13-9acd-2f19c31fce44",
+      "554a1a63-387a-489a-9dbf-a3e1260bdaf3"
+    ]
+  },
+  {
+    "id": "a0630cb4-8134-4063-bbef-3ee4cbe8fc30",
+    "faction": "northern realms",
+    "ability": "Draw a card if you win a round",
+    "cards": [
+      "60f420d4-ef40-4d23-bd96-b842b96b86f2",
+      "5746103f-abea-4411-9685-34a0c96c1bd7",
+      "6a267518-43de-4853-b8f0-896a75234cde"
+    ]
+  }
+]

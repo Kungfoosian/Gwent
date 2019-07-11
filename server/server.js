@@ -2,47 +2,25 @@
 
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 5000;
-const cards = require("./cards");
 const bodyParser = require("body-parser");
-const cors = require("cors");
+const mongoose = require("mongoose");
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+
+//Connect to MongoDB
+const mongoURI = require("./config/keys").mongoURI;
+mongoose
+  .connect(mongoURI, { useNewUrlParser: true })
+  .then(() => console.log("Connected to MongoDB!"))
+  .catch(err => console.log(`An error has occurred: ${err}`));
 
 // Routes
-app.get("/", (req, res) => {
-  res.send("<h1>Hello world</h1>");
-});
-
-app.get("/cards", (req, res) => {
-  res.json(cards.getAll());
-});
-
-app.get("/cards/:id", (req, res) => {
-  res.json(cards.getOne(req.params.id));
-});
-
-//Creating cards
-app.post("/cards", (req, res) => {
-  //let errors = preCheck(req.body);
-
-  //Results
-  res.json(cards.create(req.body));
-});
-
-//Update card
-app.put("/cards/:id", (req, res) => {
-  res.json(cards.updateCard(req.params.id, req.body));
-});
-
-//Delete card
-app.delete("/cards/:id", (req, res) => {
-  res.json(cards.deleteCard(req.params.id));
-});
+const cardsAPI = require("./routes/api/cards");
+app.use("/api/cards", cardsAPI);
 
 // Start server
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });

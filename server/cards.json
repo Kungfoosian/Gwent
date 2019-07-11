@@ -1,29 +1,83 @@
 [
-     {
-          "id": "ca6119e9-9111-4ec2-a393-350a28fa7d16",
-          "name": "eithné",
-          "faction": "scoia'tael",
-          "unit": "hero",
-          "range": "ranged",
-          "strength": "10",
-          "special": "n/a"
-     },
-     {
-          "id": "deace575-545a-4a45-81cc-da9566952191",
-          "name": "francesca findabair: the beautiful",
-          "faction": "scoia'tael",
-          "unit": "leader",
-          "range": "n/a",
-          "strength": "1",
-          "special": "Doubles the strength of all your Ranged Combat units (unless a Commander's Horn is also present on that row)"
-     },
-     {
-          "id": "bf047851-933d-4b4c-84a2-9947396acf23",
-          "name": "dol blathana scout",
-          "faction": "scoia'tael",
-          "unit": "unit",
-          "range": "agile",
-          "strength": "6",
-          "special": "agile"
-     }
+  {
+    "id": "ca6119e9-9111-4ec2-a393-350a28fa7d16",
+    "name": "eithné",
+    "faction": "scoia'tael",
+    "unit": "hero",
+    "range": "ranged",
+    "strength": "10",
+    "special": "n/a"
+  },
+  {
+    "id": "deace575-545a-4a45-81cc-da9566952191",
+    "name": "francesca findabair: the beautiful",
+    "faction": "scoia'tael",
+    "unit": "leader",
+    "range": "n/a",
+    "strength": "1",
+    "special": "Doubles the strength of all your Ranged Combat units (unless a Commander's Horn is also present on that row)"
+  },
+  {
+    "id": "bf047851-933d-4b4c-84a2-9947396acf23",
+    "name": "dol blathana scout",
+    "faction": "scoia'tael",
+    "unit": "unit",
+    "range": "agile",
+    "strength": "6",
+    "special": "agile"
+  },
+  {
+    "id": "16172cfe-3155-4d89-9a9e-6440481f0ea4",
+    "name": "arachas",
+    "faction": "monsters",
+    "unit": "unit",
+    "range": "melee",
+    "strength": "4",
+    "special": "muster"
+  },
+  {
+    "id": "830d48a4-0358-4e13-9acd-2f19c31fce44",
+    "name": "kayran",
+    "faction": "monsters",
+    "unit": "hero",
+    "range": "agile",
+    "strength": "8",
+    "special": "morale boost"
+  },
+  {
+    "id": "554a1a63-387a-489a-9dbf-a3e1260bdaf3",
+    "name": "eredin: commander of the red riders",
+    "faction": "monsters",
+    "unit": "leader",
+    "range": "n/a",
+    "strength": "0",
+    "special": "Double the strength of all your Close Combat units (unless a Commander's horn is also present on that row)"
+  },
+  {
+    "id": "60f420d4-ef40-4d23-bd96-b842b96b86f2",
+    "name": "redanian foot soldier",
+    "faction": "northern realms",
+    "unit": "unit",
+    "range": "melee",
+    "strength": "1",
+    "special": "n/a"
+  },
+  {
+    "id": "5746103f-abea-4411-9685-34a0c96c1bd7",
+    "name": "esterad thyssen",
+    "faction": "northern realms",
+    "unit": "hero",
+    "range": "melee",
+    "strength": "10",
+    "special": "n/a"
+  },
+  {
+    "id": "6a267518-43de-4853-b8f0-896a75234cde",
+    "name": "foltest: lord commander of the north",
+    "faction": "northern realms",
+    "unit": "leader",
+    "range": "n/a",
+    "strength": "0",
+    "special": "Clear any weather effects (on both sides) currently in play"
+  }
 ]

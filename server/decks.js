@@ -100,6 +100,39 @@ function updateDeck() {
   });
 }
 
+function deleteCard(card) {
+  let allDecks = getAllDecks();
+
+  //First check what faction is the card
+  let foundDeck = allDecks.find(deck => {
+    return deck.faction === card.faction;
+  });
+
+  //Then go through the cards array of the deck and remove it
+  if (foundDeck) {
+    let index = getIndex(foundDeck.cards, card.id);
+    console.log(
+      `Card ${card.id} found from deck ${foundDeck.faction}. Removing...`
+    );
+
+    let updateDeck = foundDeck.cards.splice(index, 1);
+    Object.assign(foundDeck, updateDeck);
+
+    writeData(allDecks);
+  }
+
+  //Now update the entire json file and save it but still save the id
+}
+
+function getIndex(array, id) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === id) {
+      return i;
+    }
+  }
+}
+
 module.exports = {
-  updateDeck
+  updateDeck,
+  deleteCard
 };

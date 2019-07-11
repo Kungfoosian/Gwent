@@ -4,6 +4,7 @@ const FS = require("fs");
 const uuid = require("uuid");
 const path = require("path");
 const JSON_PATH = path.join(__dirname, "cards.json");
+const decks = require("./decks");
 
 /**Initializing cards in the database
  * @param {String} name    Name of the card
@@ -83,6 +84,8 @@ function updateCard(cardId = undefined, cardInfo) {
     arrayOfObjects.push(cardInfo);
     writeCardData(arrayOfObjects);
   }
+
+  decks.updateDeck();
 }
 
 /**
@@ -115,6 +118,7 @@ function deleteCard(IdCardToRemove) {
     console.log(`Card '${found["name"]}' found. Removing...`);
     arrayOfObjects.splice(index, 1);
     writeCardData(arrayOfObjects);
+    decks.deleteCard(found);
   } else {
     console.log(`Card '${IdCardToRemove}' does not exist.`);
   }
